@@ -44,6 +44,17 @@ namespace Renamer
 			vm.Path = name;
 		}
 
+		private void PathChangeButton_Click(object sender, RoutedEventArgs e)
+		{
+			var vm = DataContext as ViewModel;
+			if (vm == null) return;
+
+			var dlg = new System.Windows.Forms.FolderBrowserDialog();
+			if (dlg.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+
+			vm.Path = dlg.SelectedPath;
+		}
+
 		private void RenameButton_Click(object sender, RoutedEventArgs e)
 		{
 			var vm = DataContext as ViewModel;

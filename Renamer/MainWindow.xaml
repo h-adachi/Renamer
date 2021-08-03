@@ -15,7 +15,7 @@
         <DockPanel>
             <DockPanel DockPanel.Dock="Top">
                 <Label Content="Path:"/>
-                <Button DockPanel.Dock="Right" Content="..."/>
+                <Button DockPanel.Dock="Right" Content="..." Click="PathChangeButton_Click"/>
                 <TextBox Text="{Binding Path, UpdateSourceTrigger=PropertyChanged}"/>
             </DockPanel>
             <DockPanel DockPanel.Dock="Bottom">
